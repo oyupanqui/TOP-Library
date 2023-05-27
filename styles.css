@@ -1,0 +1,55 @@
+* {
+    font-family: 'Playfair', serif, 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0
+}
+
+.header {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    background-color: #2e0610;
+    justify-content: space-around;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo img {
+    height: 150px;
+    border-radius: 50%;
+    border: 1px solid black;
+    filter: blur(1px)
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 2.8em;
+    text-align: center;
+    color: white;
+    text-shadow: 4px 4px 8px #ffe4e6;
+}
+
+.nav {
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;
+    color: white;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.nav li:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
