@@ -11,7 +11,7 @@
     flex-direction: row;
     gap: 20px;
     align-items: center;
-    background-color: #451a03;
+    background-color: #451a03d8;
     justify-content: space-around;
 }
 
@@ -60,25 +60,113 @@ h1 {
     padding: 20px;
     display: grid;
     justify-content: center;
-    
+    align-items: center;
+    justify-items: center;
 }
 
 .add-book {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-items: center;
     gap: 10px;
-    background-color: #b4530986;
+    background-color: #b453097e;
     padding: 15px;
     border-radius: 50px;
     font-weight: bold;
     font-size: 1.5em;
     transition-duration: 0.1s;
     cursor: pointer;
+    user-select: none;
+    width: 200px;
 }
 
 .add-book:active {
     transform: scale(1.1);
     transition-duration: 0.1s;
+}
+
+.book {
+    margin: 20px;
+    font-size: 1.2em;
+    text-align: left;
+    padding: 19px;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 30px;
+    width: 250px;
+    background-color: #fefce8;
+}
+
+.form {
+    position: fixed;
+    height: 350px;
+    width: 400px;
+    background-color: white;
+    border-color: black;
+    border-style: solid;
+    border-radius: 30px;
+    top: 50%;
+    left: 50%;
+    margin-top: -175px;
+    margin-left: -200px;
+    padding: 20px
+}
+
+.inactive {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px;
+    gap: 20px;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+input {
+    font-size: 1.2em;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #fef3c7;
+}
+
+.confirmation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px
+}
+
+.cancel {
+    display: flex;
+    justify-content: center;
+    width: 80.047px;
+    height: 23px;
+    text-align: center;
+    font-size: 1.2em;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #fef3c7;
+}
+
+#confirm {
+    cursor: pointer;
+    background-color: rgba(255, 153, 0, 0.7)
+}
+
+#cancel {
+    cursor: pointer;
+    background-color: rgba(255, 0, 0, 0.7);
 }
