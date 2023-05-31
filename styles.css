@@ -149,7 +149,7 @@ input {
     gap: 50px
 }
 
-.cancel {
+#cancel {
     display: flex;
     justify-content: center;
     width: 80.047px;
@@ -162,6 +162,21 @@ input {
 }
 
 #confirm {
+    box-sizing: content-box;
+    display: flex;
+    justify-content: center;
+    width: 80.047px;
+    height: 23px;
+    text-align: center;
+    font-size: 1.2em;
+    padding: 10px;
+    border-width: 0;
+    border-radius: 10px;
+    background-color: #fef3c7;
+}
+
+#confirm {
+    
     cursor: pointer;
     background-color: rgba(255, 153, 0, 0.7)
 }

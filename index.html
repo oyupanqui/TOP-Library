@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TOP-Library</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="scripts.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair&family=Roboto:wght@300&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <div class="header">
@@ -36,7 +36,7 @@
             <div class="read">Read: Yes</div>
         </div>
     </div>
-    <div class="form active">
+    <div class="form active" id="form">
         <form>
             <h2>Add a new book!</h2>
             <input type="text" name="title" placeholder="Title" required>
@@ -47,10 +47,12 @@
                 <input type="checkbox">
             </div>
             <div class="confirmation">
-                <input type="submit" name="submit" value="Add book" id="confirm">
+                <button type="submit" name="submit" id="confirm">Add book</button>
                 <div class="cancel" id="cancel">Cancel</div>
             </div>
         </form>
-    </div>  
+    </div> 
+
+    <script src="scripts.js" defer></script>
 </body>
 </html>
