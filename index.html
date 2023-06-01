@@ -36,19 +36,19 @@
             <div class="read">Read: Yes</div>
         </div>
     </div>
-    <div class="form active" id="form">
-        <form>
+    <div class="form inactive" id="formDiv">
+        <form id="form">
             <h2>Add a new book!</h2>
-            <input type="text" name="title" placeholder="Title" required>
-            <input type="text" name="author" placeholder="Author" required>
-            <input type="number" name="pages" placeholder="Pages" min="1">
+            <input type="text" name="title" placeholder="Title" id="form-title" required>
+            <input type="text" name="author" placeholder="Author" id="form-author" required>
+            <input type="number" name="pages" placeholder="Pages" id="form-pages" min="1">
             <div class="is-readed">
                 <label for="is-readed">Have you read it?</label>
-                <input type="checkbox">
+                <input type="checkbox" id="form-read">
             </div>
             <div class="confirmation">
                 <button type="submit" name="submit" id="confirm">Add book</button>
-                <div class="cancel" id="cancel">Cancel</div>
+                <div class="cancel" id="cancel" onClick="closeForm()">Cancel</div>
             </div>
         </form>
     </div> 
