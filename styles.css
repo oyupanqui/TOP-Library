@@ -91,7 +91,10 @@ h1 {
 }
 
 .book {
-    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 30px;
     font-size: 1.3em;
     text-align: left;
     padding: 19px;
@@ -104,9 +107,14 @@ h1 {
     box-shadow: 10px 10px 15px black;
 }
 
+.book img {
+    cursor: pointer;
+    align-self: center;
+}
+
 .form {
     position: fixed;
-    height: 350px;
+    height: 400px;
     width: 400px;
     background-color: white;
     border-color: black;
