@@ -114,7 +114,7 @@ h1 {
 
 .form {
     position: fixed;
-    height: 400px;
+    height: 420px;
     width: 400px;
     background-color: white;
     border-color: black;
@@ -189,12 +189,13 @@ input {
     display: flex;
     justify-content: center;
     width: 80.047px;
-    height: 23px;
+    height: 35px;
     text-align: center;
     font-size: 1.2em;
     padding: 10px;
     border-radius: 10px;
     background-color: #fef3c7;
+    align-items: center;
 }
 
 #confirm {
@@ -202,13 +203,14 @@ input {
     display: flex;
     justify-content: center;
     width: 80.047px;
-    height: 23px;
+    height: 35px;
     text-align: center;
     font-size: 1.2em;
     padding: 10px;
     border-width: 0;
     border-radius: 10px;
     background-color: #fef3c7;
+    align-items: center;
 }
 
 #confirm {
