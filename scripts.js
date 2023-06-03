@@ -61,6 +61,7 @@ if (localStorage.length == 0) {
     myLibrary.push(Sil)
     myLibrary.push(It)
     myLibrary.push(Drac)
+    saveData()
 }
 
 myLibrary = JSON.parse(localStorage.getItem("library")).map(function (ele) {
@@ -90,7 +91,7 @@ form.addEventListener("submit", (e)=>{
     const newBook = new Book(formTitle, formAuthor, formPages, formGenre, formRead)
     myLibrary.push(newBook)
     addBookToLibrary(newBook)
-    localStorage.setItem("library", JSON.stringify(myLibrary))
+    saveData()
 })
 
 const trashCol = document.getElementsByClassName("trash")
@@ -107,6 +108,10 @@ Array.from(trashCol).forEach((button) => {
             }
         }
         button.parentNode.remove()
+        saveData()
     })
 })
 
+function saveData () {
+    localStorage.setItem("library", JSON.stringify(myLibrary))
+}
