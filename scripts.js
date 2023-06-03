@@ -32,20 +32,6 @@ function Book(title, author, pages, genre, read){
     this.read = read;
 }
 
-// Some pre-made books
-
-const CoC = new Book("The Call of Cthulhu", "H.P. Lovecraft", 35, "Horror", "Yes")
-myLibrary.push(CoC)
-
-const Sil = new Book("The Silmarillion", "J.R.R. Tolkien", 480, "Fantasy", "No")
-myLibrary.push(Sil)
-
-const It = new Book("It", "Stephen King", 1138, "Horror", "No")
-myLibrary.push(It)
-
-const Drac = new Book("Dracula", "Bram Stoker", 418, "Horror", "Yes")
-myLibrary.push(Drac)
-
 // Function to add books to the array
 
 function addBookToLibrary(book) {
@@ -60,6 +46,27 @@ function addBookToLibrary(book) {
         <img src="img/delete.svg" height="25px" width="25px" class="trash">`
     library.appendChild(bookCard);
 }
+
+// Some pre-made books
+
+const CoC = new Book("The Call of Cthulhu", "H.P. Lovecraft", 35, "Horror", "Yes")
+const Sil = new Book("The Silmarillion", "J.R.R. Tolkien", 480, "Fantasy", "No")
+const It = new Book("It", "Stephen King", 1138, "Horror", "No")
+const Drac = new Book("Dracula", "Bram Stoker", 418, "Horror", "Yes")
+
+let storage = JSON.parse(localStorage.getItem("library"))
+
+if (localStorage.length == 0) {
+    myLibrary.push(CoC)
+    myLibrary.push(Sil)
+    myLibrary.push(It)
+    myLibrary.push(Drac)
+}
+
+myLibrary = JSON.parse(localStorage.getItem("library")).map(function (ele) {
+    let obj = new Book(ele.title, ele.author, ele.pages, ele.genre, ele.read)
+    return obj
+})
 
 // Initial loop to add pre-made books
 
@@ -83,6 +90,7 @@ form.addEventListener("submit", (e)=>{
     const newBook = new Book(formTitle, formAuthor, formPages, formGenre, formRead)
     myLibrary.push(newBook)
     addBookToLibrary(newBook)
+    localStorage.setItem("library", JSON.stringify(myLibrary))
 })
 
 const trashCol = document.getElementsByClassName("trash")
