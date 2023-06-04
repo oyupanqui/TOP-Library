@@ -53,6 +53,8 @@ const CoC = new Book("The Call of Cthulhu", "H.P. Lovecraft", 35, "Horror", "Yes
 const Sil = new Book("The Silmarillion", "J.R.R. Tolkien", 480, "Fantasy", "No")
 const It = new Book("It", "Stephen King", 1138, "Horror", "No")
 const Drac = new Book("Dracula", "Bram Stoker", 418, "Horror", "Yes")
+const Dun = new Book("Dune", "Frank Herbert", 896, "Sci-fi", "No")
+const DiC = new Book("The Divine Comedy", "Dante Alighieri", 928, "Literature", "No")
 
 let storage = JSON.parse(localStorage.getItem("library"))
 
@@ -61,6 +63,8 @@ if (localStorage.length == 0) {
     myLibrary.push(Sil)
     myLibrary.push(It)
     myLibrary.push(Drac)
+    myLibrary.push(Dun)
+    myLibrary.push(DiC)
     saveData()
 }
 
@@ -114,4 +118,12 @@ Array.from(trashCol).forEach((button) => {
 
 function saveData () {
     localStorage.setItem("library", JSON.stringify(myLibrary))
+}
+
+function addBlank () {
+    document.getElementsByClassName("blank")[0].style.display = "block"
+}
+
+function removeBlank () {
+    document.getElementsByClassName("blank")[0].style.display = "none"
 }

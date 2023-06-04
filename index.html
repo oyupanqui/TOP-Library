@@ -25,12 +25,13 @@
         </ul>
     </div>
     <div class="main" id="library">
-        <div class="add-book" onclick="openForm()">
+        <div class="add-book" onclick="openForm();addBlank()">
             <img src="img/plus.svg" alt="Add" height="50px">
             <p>Add a book!</p>
         </div>
         
     </div>
+    <div class="blank"></div>
     <div class="form inactive" id="formDiv">
         <form id="form">
             <h2>Add a new book!</h2>
@@ -43,12 +44,11 @@
                 <input type="checkbox" id="form-read">
             </div>
             <div class="confirmation">
-                <button type="submit" name="submit" id="confirm">Add book</button>
-                <div class="cancel" id="cancel" onClick="closeForm()">Cancel</div>
+                <button type="submit" name="submit" id="confirm", onClick="removeBlank()">Add book</button>
+                <div class="cancel" id="cancel" onClick="closeForm();removeBlank()">Cancel</div>
             </div>
         </form>
     </div> 
-
     <script src="scripts.js" defer></script>
 </body>
 </html>
